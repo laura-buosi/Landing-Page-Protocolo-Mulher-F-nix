@@ -1,0 +1,141 @@
+    :root {
+        --pretoMarrom: #540707;
+        --vinho: #940024;
+        --vermelho: #a40e0e;
+        --amareloDourado: #d4af37;
+        --branco: #f8f5f2;
+        --cinza: #d1c7c2;
+        --gradiente-vermelhoPreto: linear-gradient(to bottom, #000, #540707);
+        --gradiente-vermelhoPreto2: linear-gradient(to top, #000, #540707);
+        --gradiente-dourado-suave: linear-gradient(45deg, #D4AF37, #FFF2CD);
+        --gradiente-duplo-animado: linear-gradient(180deg, #d4af37 0%, #FFF2CD 50%, #FFF2CD 50%, #d4af37 100%);
+    }
+
+    body{
+        font-family: Montserrat;
+        background-color: #000;
+        color: var(--branco);
+        overflow-x: hidden;
+    }
+
+    .logo-fixa {
+        position: fixed;
+        bottom: 20px;   /* distância do fundo */
+        right: 20px;    /* distância da direita */
+        width: 10%;    /* tamanho da logo */
+        z-index: 1000;  /* garante que fique por cima de tudo */
+    }
+
+        .titulo2_cta {
+        /* 1. Aplicamos o gradiente ao fundo do elemento */
+        background: var(--gradiente-dourado-suave);
+
+        /* 2. Fazemos o fundo "sumir" de todo lugar, menos de onde tem texto */
+        -webkit-background-clip: text; /* Para Chrome, Safari e Edge */
+        background-clip: text;         /* Padrão moderno */
+
+        /* 3. Tornamos a cor original do texto transparente para que o fundo apareça */
+        -webkit-text-fill-color: transparent;
+        color: transparent; /* Fallback */
+        
+        /* Opcional: Garante que o texto tenha peso para o dourado aparecer bem */
+        display: inline-block; 
+    }
+
+/*EXPLICACAO*/
+#explicacao {
+    background-color: #000;
+}
+
+.meuLista2 {
+    background-color: transparent;
+    color: #f8f5f2;
+    border: none;
+}
+
+#img_ex{
+        width: 100%;
+        overflow: hidden;
+}
+
+/*FOOTER*/
+.footer {
+    background: #0f0f0f;
+    color: var(--branco);
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-frase {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    background: var(--gradiente-dourado-suave);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+}
+
+/* Remove azul e sublinhado de TODOS os links do footer */
+.footer a {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+/* Garante que não volte em estados diferentes */
+.footer a:visited,
+.footer a:active,
+.footer a:focus {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+/* Hover bonitinho */
+.footer a:hover {
+    color: var(--vermelho);
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: var(--branco);
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--vermelho);
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social i {
+    font-size: 1.3rem;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-social i:hover {
+    color: var(--vermelho);
+    transform: scale(1.2);
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .footer-links {
+        display: none;
+    }
+}

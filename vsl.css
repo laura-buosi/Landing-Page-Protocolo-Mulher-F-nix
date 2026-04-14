@@ -1,0 +1,118 @@
+/*VSL*/    
+    #titulo_vsl {
+        margin-top: 2em;
+        margin-bottom: 0;
+        border-image: linear-gradient(135deg, #D4AF37, #FFF2CD) 1;
+        border-style: solid;
+        border-width: 4px 0 0 0;
+        border-color: #D4AF37;
+    }
+
+    .meuLista{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+
+        background-color: #5407077a;
+        color: var(--branco);
+        box-shadow: 0 4px 15px #a40e0e96;
+        border: solid 0.2px #a40e0e96;
+        padding: 1em;
+    }
+
+
+
+    #vsl2 {
+        background-color: #000;
+    }
+
+    .flex{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1em;
+        padding: 2em;
+        max-width: 800px;
+        width: 100%;
+        height: 633px;
+    }
+
+    #texto_vsl, #img_vsl {
+        width: 50%;
+    }
+
+    #img_vsl {
+        height: auto; /* Deixe o flex controlar a altura */
+        object-fit: cover;
+    }
+
+    #texto_vsl {
+        margin: 0; /* Remova margens padrão que podem quebrar o alinhamento */
+        padding: 2em;
+    }
+
+    .botaoVSL {
+        z-index: 1;
+    }
+
+@media (max-width: 768px) {
+    #titulo_vsl {
+        margin: 0 1em;
+        margin-top: 0.5em;
+    }
+
+    #vsl iframe {
+        width: 90%; 
+        height: auto;
+        aspect-ratio: 16 / 9; 
+        padding-top: 2em;
+    }
+
+    .flex {
+        flex-direction: column;
+        position: relative;
+        height: auto; /* IMPORTANTE: Anula os 633px travados do desktop */
+        padding: 0; /* Tira o respiro externo para a foto colar nas laterais */
+    }
+
+    #img_vsl {
+        width: 100%;
+        height: 100vh; /* Faz a foto ocupar a altura toda da tela do celular */
+        object-fit: cover;
+        object-position: center top; /* 'top' garante que o rosto dela não seja cortado */
+    }
+
+    #texto_vsl {
+        position: absolute;
+        /* A LINHA DO TRANSFORM FOI REMOVIDA DAQUI */
+        
+        width: 100%;
+        height: 100vh; /* Ocupa 100% da área da imagem */
+        background: rgba(0,0,0,0.3); /* Película escura para dar leitura no texto */
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        text-align: center;
+        
+        overflow: hidden;
+        padding: 0 2em;
+        box-sizing: border-box; /* Garante que o padding não quebre a largura de 100% */
+    }
+
+    .botaoVSL {
+        font-size: 1em;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 320px){
+    #texto_vsl{
+        font-size: 0.8em;
+    }
+
+    .botaoVSL {
+        font-size: 0.8em;
+    }
+}

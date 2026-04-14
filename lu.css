@@ -1,0 +1,97 @@
+/*LU*/
+/* =========================================
+   SEÇÃO LU (QUEM TE CONDUZ)
+   ========================================= */
+
+#lu .titulo2_cta.text-center {
+    width: 100%;
+    margin-bottom: 2em; /* Espaço entre o título e o bloco da Luciane */
+    padding: 0 10px;    /* Apenas um pequeno respiro para não colar no vidro do celular */
+}
+
+.mobile {
+    display: none;
+}
+
+#flex_lu {
+    display: flex;
+    flex-direction: row-reverse; /* Lado a lado no computador */
+    align-items: center; /* Centraliza a foto e o texto verticalmente */
+    justify-content: center;
+    max-width: 1100px; /* Limita a largura para não ficar muito esticado em telas gigantes */
+    margin: 0 auto; /* Centraliza o bloco na página */
+    gap: 4em; /* Espaço elegante entre a foto e o texto */
+    padding: 0 2em;
+}
+
+/* --- ESTILO DA IMAGEM --- */
+#flex_lu img {
+    width: 45%; /* Imagem ocupa quase metade da tela no PC */
+    object-fit: contain; /* Garante que a foto não corte no PC */
+}
+
+/* --- ESTILO DO TEXTO --- */
+#texto_lu {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em; /* Dá um respiro automático entre todos os parágrafos */
+}
+
+/* Ajustes de tipografia para ficar mais chamativo */
+#texto_lu p {
+    margin: 0;
+    line-height: 1.6;
+    text-align: right;
+    font-size: 1.1rem;
+    color: #e0e0e0; /* Um branco levemente acinzentado para não cansar a vista */
+}
+
+#texto_lu .fs-3.titulo2_cta {
+    color: #fff;
+    margin-bottom: -10px; /* Junta um pouco o nome com a profissão */
+}
+
+
+/* =========================================
+   RESPONSIVIDADE (CELULARES)
+   ========================================= */
+@media (max-width: 768px) {
+
+    .mobile {
+        display: block;
+        text-align: center;
+    }
+
+    #flex_lu {
+        flex-direction: column; /* Coloca um embaixo do outro */
+        gap: 2em;
+        padding: 0 1.5em;
+    }
+
+    #flex_lu img {
+        width: 100%;
+        height: 450px; /* Altura fixa para o celular */
+    }
+
+    #texto_lu {
+        width: 100%;
+        text-align: center; /* Centraliza o texto no celular para ficar mais harmônico */
+    }
+
+    #texto_lu .fs-3.titulo2_cta {
+        display: none;
+    }
+
+    #texto_lu .fs-7.titulo2_cta {
+        display: none;
+    }
+
+    #texto_lu .fs-1.titulo2_cta {
+        text-align: center !important; /* Volta a centralizar o título principal */
+    }
+    
+    #texto_lu p {
+        text-align: center;
+    }
+}

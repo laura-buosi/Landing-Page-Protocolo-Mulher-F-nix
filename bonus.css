@@ -1,0 +1,140 @@
+#oferta-bonus {
+    background: var(--gradiente-vermelhoPreto2);
+    padding: 60px 20px;
+}
+
+.bonus-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.bonus-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.bonus-card {
+    background: var(--gradiente-dourado-suave);
+    color: var(--pretoMarrom);
+
+    /*background: var(--gradiente-dourado-suave);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;*/
+
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.bonus-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.icon-bonus { font-size: 2.5rem; margin-bottom: 10px; }
+.bonus-card h4 { font-size: 1.1rem; color: var(--pretoMarrom); margin-bottom: 10px; }
+.bonus-card p { font-size: 0.9rem; color: var(--pretoMarrom); min-height: 60px; }
+.valor-bonus { color: var(--pretoMarrom); font-weight: bold; font-size: 0.8rem; display: block; margin-top: 10px; }
+
+/*.tag-exclusivo {
+    background: #540707;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+}*/
+
+/* --- PREÇO --- */
+.ancoragem-preço { text-align: center; margin-top: 40px; }
+.valor-total span { text-decoration: line-through; color: #ff0000; font-size: 1.5rem;}
+.preco-gold {
+    font-size: 3.5rem;
+    margin: 10px 0;
+    background: var(--gradiente-dourado-suave);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+}
+
+/* --- GARANTIA E CTAS --- */
+.fechamento-wrapper { flex: 1; position: sticky; top: 20px; }
+
+.garantia-box {
+    border: 2px solid #d4af37;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    background: var(--gradiente-dourado-suave);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+}
+
+.garantia-header { display: flex; justify-content: center; align-items: center; gap: 10px; }
+.num-sete { font-size: 6rem; line-height: 1; }
+.garantia-selo { font-size: 3rem;}
+.frase-impacto { font-weight: bold; text-decoration: underline; margin-top: 15px; }
+
+.escassez {text-align: center; margin-bottom: 30px; }
+
+/* --- BOTÕES --- */
+.btn-renascer {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.btn-renascer { background: #540707; color: #fff; font-size: 1.1rem; border: 2px solid #540707;}
+.btn-renascer:hover { background: #7a0a0a; transform: scale(1.02); }
+
+/* Animação de Pulso */
+@keyframes pulse-red {
+    0% { box-shadow: 0 0 0 0 rgba(84, 7, 7, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(84, 7, 7, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(84, 7, 7, 0); }
+}
+.pulse { animation: pulse-red 2s infinite; }
+
+/* Telas médias (Tablets): 2 colunas e 2 linhas */
+@media (max-width: 1024px) {
+    .bonus-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .bonus-container { flex-direction: column; }
+    .fechamento-wrapper { position: static; }
+    .preco-gold { font-size: 2.5rem; }
+}
+
+/* Telas pequenas (Celulares): 1 coluna e 4 linhas */
+@media (max-width: 600px) {
+    .bonus-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

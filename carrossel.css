@@ -1,0 +1,114 @@
+/*CARROSSEL*/
+#carrossel {
+    background: var(--gradiente-vermelhoPreto);
+}
+
+.meuTitulo {
+    width: 100%;
+    padding-top: 2em;
+}
+
+/* =========================================
+   NOVO CARROSSEL AMPLO (ESTILO SLICK/CENTER MODE)
+   ========================================= */
+
+#carrossel {
+    background-color: #000; /* Fundo preto que vi nos seus prints */
+    overflow: hidden; /* Importante para a amplitude nas laterais */
+}
+
+.depoimentos-container {
+    width: 100%;
+    max-width: 1300px; /* Maior para dar a impressão de amplitude */
+    margin: 0 auto;
+    padding: 0 50px; /* Respiro nas laterais */
+}
+
+/* --- Estilo de cada slide individual --- */
+.depoimento-item {
+    padding: 10px; /* Espaço entre os slides */
+    transition: all 0.6s ease-in-out; /* Animação suave */
+    opacity: 0.25; /* Slides laterais ficam bem apagados */
+    transform: scale(0.7); /* Slides laterais ficam pequenos */
+    pointer-events: none; /* Impede clicar nos vizinhos */
+}
+
+/* --- ESTILO DO SLIDE CENTRAL (ATIVO) --- */
+/* O Slick adiciona esta classe automaticamente ao item do meio */
+.depoimento-item.slick-center {
+    opacity: 1; /* Slide central é totalmente visível */
+    transform: scale(1.15); /* Slide central cresce para dar destaque */
+    z-index: 10;
+    pointer-events: auto; /* Permite clicar no central */
+}
+
+/* Ajuste das imagens - preservando a proporção sem cortes */
+.depoimento-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Bordas arredondadas profissionais */
+}
+
+/* --- Estilização das Setinhas Douradas --- */
+.slick-prev,
+.slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+}
+
+/* Estilo do ícone interno em dourado (#d4af37) */
+.slick-prev:before,
+.slick-next:before {
+    font-size: 40px;
+    color: #d4af37; /* Dourado Fênix */
+    opacity: 0.8;
+}
+
+/* Posicionamento - Para fora da imagem central */
+.slick-prev { left: 3%; }
+.slick-next { right: 3%; }
+
+.slick-prev:before { content: '<'; }
+.slick-next:before { content: '>'; }
+
+/* Garante que o slide que está "saindo" e o que está "entrando" tenham transições suaves */
+.slick-slide {
+    transition: all 0.5s ease-in-out;
+    outline: none !important; /* Remove aquela bordinha azul chata ao clicar */
+}
+
+/* Isso força o navegador a renderizar os clones corretamente durante o loop infinito */
+.slick-track {
+    display: flex !important;
+    align-items: center;
+}
+
+/* Reforça que apenas o centro real tenha brilho e tamanho total */
+.depoimento-item.slick-active.slick-center {
+    opacity: 1 !important;
+    transform: scale(1.15) !important;
+}
+
+/* Responsividade: No celular, as laterais saem */
+@media (max-width: 768px) {
+    .depoimentos-container {
+        padding: 0 20px;
+    }
+    .slick-prev { left: 5px; }
+    .slick-next { right: 5px; }
+    
+    /* No celular, tira o zoom lateral para não perder espaço */
+    .depoimento-item.slick-center {
+        transform: scale(1);
+    }
+}

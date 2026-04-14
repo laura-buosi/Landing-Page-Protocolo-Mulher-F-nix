@@ -1,0 +1,151 @@
+/*CTA*/
+    #cta {
+        background-image: url("fenix3.png");
+        height: 100vh;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0 10em;
+        overflow: hidden;
+    }
+
+    #titulo_cta{
+        padding-top: 2em;
+        padding-right: 2em;
+        margin-bottom: 1em;
+        line-height: 1.2em;
+        font-size: 2.5em;
+    }
+
+    #subtitulo_cta{
+        line-height: 1em;
+        padding-left: 0.5em;
+        padding-bottom: 0.5em;
+        margin-right: 18em;
+        font-size: 1.2em;
+
+        border-image: linear-gradient(135deg, #D4AF37, #FFF2CD) 1;
+        border-style: solid;
+        border-width: 0 0 4px 4px;
+        border-color: #D4AF37;
+    }
+
+    .meuBotao{
+        background: var(--gradiente-duplo-animado);
+        color: var(--pretoMarrom);
+        font-size: 2em;
+        background-position: top;
+        background-size: 100% 200%;
+        transition: 0.7s;
+        margin-top: 0.5em;
+    }
+
+    .meuBotao:hover{
+        color: var(--pretoMarrom);
+        background-position: bottom;
+    }
+
+/* MEDIAS QUERYS*/
+    /*CTA*/
+    @media (max-width: 1024px) {
+        #cta {
+            height: 70vh;
+        }
+
+        #titulo_cta {
+            font-size: 1.5em;
+        }
+
+        #subtitulo_cta {
+            font-size: 0.8em;
+        }
+
+        #cta smal {
+            font-size: 0.8em;
+        }
+
+        .meuBotao {
+            font-size: 1.3em;
+            margin-top: 0;
+        }
+    }
+
+    @media (max-width: 750px) {
+        #cta {
+            height: 50vh;
+        }
+
+        #titulo_cta {
+            font-size: 1em;
+        }
+
+        #subtitulo_cta {
+            font-size: 0.5em;
+        }
+
+        #cta smal {
+            font-size: 0.4em;
+        }
+
+        .meuBotao {
+            font-size: 0.9em;
+            margin-top: -1em;
+        }
+    }
+
+    @media (max-width: 600px) {
+        #cta {
+            height: 30vh;
+            padding: 0 5em; 
+        }
+
+        #titulo_cta {
+            font-size: 0.7em;
+            padding-top: 4em;
+        }
+
+        #subtitulo_cta {
+            font-size: 0.3em;
+            margin-bottom: 0;
+        }
+
+        #cta smal {
+            font-size: 0.3em;
+        }
+
+        .meuBotao {
+            font-size: 0.45em;
+            margin-top: -5em;
+        }
+    }
+
+    @media (max-width: 300px) {
+        #cta {
+            height: 15vh;
+            padding-right: 10em;
+            padding-left: 1em;
+        }
+
+        #titulo_cta {
+            font-size: 0.25em;
+            padding-top: 10em;
+        }
+
+        #subtitulo_cta {
+            font-size: 0.12em;
+            margin-bottom: 0;
+            border-width: 0 0 1px 1px;
+        }
+
+        #cta smal {
+            font-size: 0.1em;
+            margin-top: -5em;
+        }
+
+        .meuBotao {
+            font-size: 0.22em;
+            margin-top: -15em;
+            padding: 1em;
+        }
+    }
