@@ -22,8 +22,14 @@
         position: fixed;
         bottom: 20px;   /* distância do fundo */
         right: 20px;    /* distância da direita */
-        width: 10%;    /* tamanho da logo */
+        width: 20%;    /* tamanho da logo */
         z-index: 1000;  /* garante que fique por cima de tudo */
+    }
+
+    @media (max-width: 600px) {
+        .logo-fixa {
+            width: 30%;
+        }
     }
 
         .titulo2_cta {
