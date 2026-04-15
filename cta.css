@@ -51,6 +51,7 @@
     @media (max-width: 1024px) {
         #cta {
             height: 70vh;
+            padding: 0 5em;
         }
 
         #titulo_cta {
@@ -81,71 +82,58 @@
         }
 
         #subtitulo_cta {
-            font-size: 0.5em;
+            font-size: 0.8em;
+            border-width: 0 0 1px 1px;
         }
 
         #cta smal {
-            font-size: 0.4em;
+            display: none;
         }
 
         .meuBotao {
             font-size: 0.9em;
-            margin-top: -1em;
+            margin-top: -5em;
         }
     }
 
     @media (max-width: 600px) {
         #cta {
             height: 30vh;
-            padding: 0 5em; 
+            padding: 0 1em;
         }
 
         #titulo_cta {
-            font-size: 0.7em;
-            padding-top: 4em;
+            display: none;
         }
 
         #subtitulo_cta {
-            font-size: 0.3em;
+            font-size: 1em;
+            margin-right: 1em;
+            margin-top: 2em;
             margin-bottom: 0;
-        }
-
-        #cta smal {
-            font-size: 0.3em;
+            padding: 0;
+            border: none;
         }
 
         .meuBotao {
-            font-size: 0.45em;
-            margin-top: -5em;
+            font-size: 1em;
+            margin-top: -2em;
         }
     }
 
-    @media (max-width: 300px) {
+    @media (max-width: 320px) {
         #cta {
             height: 15vh;
-            padding-right: 10em;
-            padding-left: 1em;
-        }
-
-        #titulo_cta {
-            font-size: 0.25em;
-            padding-top: 10em;
         }
 
         #subtitulo_cta {
-            font-size: 0.12em;
-            margin-bottom: 0;
-            border-width: 0 0 1px 1px;
-        }
-
-        #cta smal {
-            font-size: 0.1em;
-            margin-top: -5em;
+            margin-top: 2em;
+            font-size: 0.7em;
         }
 
         .meuBotao {
-            font-size: 0.22em;
-            margin-top: -15em;
-            padding: 1em;
+            font-size: 0.6em;
+            margin-top: -10em;
+            padding: 0.5em;
         }
     }
